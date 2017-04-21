@@ -7,9 +7,9 @@
 #include <iterator>
 #include "HuffmanTree.h"
 
-#define INPUT_MODE 1	// 0 - read from terminal
+#define INPUT_MODE 0	// 0 - read from terminal
 						// 1 - read from file
-#define DEBUG_MODE 0  
+#define DEBUG_MODE 1  
 #define FILENAME "file.txt"
 
 struct greaterOrder
@@ -121,8 +121,8 @@ void main()
 	else
 	{
 		std::cout << "Enter text to encryption: "; 
-		getline(std::cin, input);
-		//input = "beep boop beer!";
+		//getline(std::cin, input);
+		input = "beep boop beer!";
 	}
 
 	HuffmanTree codeTree(*huffmanEncode(input, encoded));
